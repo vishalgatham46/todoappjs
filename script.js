@@ -71,6 +71,7 @@ function card_creation(list){
  
    cards_dynamic.forEach(element => {
       list.id=element.id;
+      console.log(element.id);
       list.querySelector(".card_title").innerHTML=element.title;
       list.setAttribute("value",`${element.id}`);
       list.setAttribute("display","block");
@@ -124,6 +125,7 @@ function item_creation(){
 
 function removeList(currentitem){
    delete_card = document.getElementById(`${currentitem}`);
+   console.log(delete_card);
    for(obj of cards_dynamic){
       for(property in obj){
          if (obj.id==currentitem)
@@ -150,3 +152,15 @@ function marking_done(value){
    a.style.visibility="hidden";
 };
 
+
+
+var dd;
+var displaylist;
+
+function largedisplay(displaylist){
+   dd = document.getElementById(`${displaylist}`);
+   console.log(dd);
+   dd.style.visibility="hidden";
+   dd.style.width="500px";
+   dd.style.height="400px";
+}

@@ -41,12 +41,10 @@
                 <button  id="additem_btn" onclick="item_creation()">Add List</button>
                 <button  id="close_btn_item" style="margin-left: 10px;" onclick="close_modalitem()">X</button>
         </div>
-        <div class="subtask_element" style="display: none;" >
-            <button class="done_btn" value="" onclick="completedTask(this)" style="cursor: pointer;">Done</button>
-         </div>
+        
         <div id="cards_container">
                 <div class="cards">
-                    <span class="card_title">Title</span>
+                    <span class="card_title" style="cursor: pointer;" onclick="largedisplay(this)">Title</span>
                     <br><br><hr>
                     <div class="add_list_container"></div>
                     <br>
@@ -56,6 +54,9 @@
                     </div>
                 </div>
         </div>
+        <div class="subtask_element" style="display: none;" >
+            <button class="done_btn" style="cursor: pointer;">Done</button>
+         </div>
     <script src="./script.js"></script>
 </body>
 </html>
